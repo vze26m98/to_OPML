@@ -1,0 +1,16 @@
+to_OPML: A collection of scripts that create OPML files, mostly useful for import into Eastgate Tinderbox, or Omnioutliner.
+
+2010-09-12:
+Files are written in Applescript and Python, which presupposes you have py-appscript installed.
+
+It can be found at: <http://appscript.sourceforge.net/py-appscript/index.html>
+
+Even if these scripts don't do exact;y what you want, likely there is some code that would speed your scripting adventure along.
+
+dtpo_to_opml.py: runs through a selection of DEVONthink records and creates OPML useful for Tinderbox or Omnioutliner notes. Name is place in $Name attribute and contents in $Text. Additionally, author, date, DEVONthink URL and tags are also added.
+
+explode_to_opml.applescript: More or less the same as the above, but written in Applescript. A fix for a script that was found broken of the DEVONtechnologies forum.
+
+sheet_to_opml.applescript: Another DEVONthink to OPML script. Here the export is a DEVONthink sheet to OPML. Each row becomes an item, and column are created as attributes. Particular column names are valuable in this case, eg: "Name," "Text" and "_note" are significant for Tinderbox
+
+skim_to_opml.py: Takes Skim highlights and creates a Tinderbox or Omnioutliner entry for each note. Notes are children of a "Protoype" in Tinderbox-speak, which would enable adding attributes that would generally describe the notes as a whole, such as a bibliographic citation. (I may add Bibdesk and DEVONthink URL support to this in the future.)
